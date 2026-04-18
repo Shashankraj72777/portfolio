@@ -45,7 +45,7 @@ export default function Footer() {
           ].map(({ href, icon, label }) => (
             <a
               key={label}
-              href={typeof href === 'string' ? href : undefined}
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}

@@ -28,42 +28,11 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '9dca9e08-ad62-4eb5-84a8-cbe970095a38',
-          name: form.name,
-          email: form.email,
-          message: form.message,
-          from_name: 'Portfolio Contact Form',
-          subject: `New Message from ${form.name} via Portfolio`,
-        }),
-      });
-
-      const result = await response.json();
-      if (result.success) {
-        setStatus('sent');
-        setForm({ name: '', email: '', message: '' });
-      } else {
-        console.error('Submission failed:', result);
-        setStatus('error');
-      }
-    } catch (error) {
-      console.error('Submission error:', error);
-      setStatus('error');
-    }
-
-    setTimeout(() => {
-      if (status !== 'error') {
-        setStatus('idle');
-      }
-    }, 4000);
+    // Simulate send (integrate with Formspree or EmailJS)
+    await new Promise((r) => setTimeout(r, 1500));
+    setStatus('sent');
+    setForm({ name: '', email: '', message: '' });
+    setTimeout(() => setStatus('idle'), 4000);
   };
 
   const contacts = [
@@ -163,7 +132,7 @@ export default function Contact() {
               {socials.map((s) => (
                 <a
                   key={s.label}
-                  href={typeof s.href === 'string' ? s.href : undefined}
+                  href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
@@ -310,11 +279,6 @@ export default function Contact() {
               {status === 'sent' && (
                 <p className="text-center text-sm font-mono" style={{ color: 'var(--accent)' }}>
                   Thanks! I&apos;ll get back to you soon.
-                </p>
-              )}
-              {status === 'error' && (
-                <p className="text-center text-sm font-mono text-red-500">
-                  Oops! Something went wrong. Please try again or email me directly.
                 </p>
               )}
             </form>
