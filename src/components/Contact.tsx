@@ -28,10 +28,36 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-    // Simulate send (integrate with Formspree or EmailJS)
-    await new Promise((r) => setTimeout(r, 1500));
-    setStatus('sent');
-    setForm({ name: '', email: '', message: '' });
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '9dca9e08-ad62-4eb5-84a8-cbe970095a38',
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          subject: `New Contact Form Submission from ${form.name}`,
+          from_name: 'Portfolio Contact Form',
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setStatus('sent');
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      setStatus('error');
+    }
+
     setTimeout(() => setStatus('idle'), 4000);
   };
 
@@ -277,8 +303,14 @@ export default function Contact() {
               </button>
 
               {status === 'sent' && (
-                <p className="text-center text-sm font-mono" style={{ color: 'var(--accent)' }}>
-                  Thanks! I&apos;ll get back to you soon.
+                <p className="text-center text-sm font-mono animate-pulse" style={{ color: 'var(--accent)' }}>
+                  ✓ Thanks! I&apos;ll get back to you soon.
+                </p>
+              )}
+
+              {status === 'error' && (
+                <p className="text-center text-sm font-mono text-red-500">
+                  ⚠ Oops! Something went wrong. Please try again.
                 </p>
               )}
             </form>
