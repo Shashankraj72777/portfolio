@@ -22,10 +22,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Shashank Raj — Full Stack Engineer',
+  title: 'Shashank Raj — Software Engineer | Full Stack Developer',
   description:
-    'Full Stack Software Engineer with expertise in Node.js, TypeScript, React, Next.js, microservices, and distributed systems.',
-  keywords: ['Full Stack', 'Software Engineer', 'Node.js', 'TypeScript', 'React', 'Next.js'],
+    'Software Engineer & Full Stack Developer actively seeking SDE 1 roles. Expertise in Node.js, TypeScript, React, Next.js, microservices, and distributed systems. 1+ years of experience shipping production-grade web applications.',
+  keywords: ['SDE 1', 'Software Engineer', 'Full Stack Developer', 'Node.js', 'TypeScript', 'React', 'Next.js', 'Backend Developer', 'Frontend Developer'],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

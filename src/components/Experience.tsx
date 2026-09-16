@@ -44,7 +44,7 @@ export default function Experience() {
           </h2>
           <div
             className="w-16 h-1 mt-4 rounded-full"
-            style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent-2))' }}
+            style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent-4))' }}
           />
         </div>
 
@@ -53,7 +53,7 @@ export default function Experience() {
           {/* Vertical line */}
           <div
             className="absolute left-6 md:left-8 top-0 bottom-0 w-px"
-            style={{ background: 'linear-gradient(to bottom, var(--accent), transparent)' }}
+            style={{ background: 'linear-gradient(to bottom, var(--accent), var(--accent-2), var(--accent-3), transparent)' }}
           />
 
           <div className="space-y-12">
@@ -127,6 +127,25 @@ export default function Experience() {
                       </div>
                     </div>
                   </div>
+
+                  {/* Tech stack */}
+                  {job.tech && job.tech.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {job.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 rounded-lg text-xs font-mono font-medium"
+                          style={{
+                            background: 'color-mix(in srgb, var(--accent) 10%, var(--bg-secondary))',
+                            border: '1px solid color-mix(in srgb, var(--accent) 25%, transparent)',
+                            color: 'var(--accent)',
+                          }}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
 
                   {/* Bullets */}
                   <ul className="space-y-3">

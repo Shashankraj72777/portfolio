@@ -44,7 +44,7 @@ export default function Projects() {
           </h2>
           <div
             className="w-16 h-1 mt-4 rounded-full"
-            style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent-2))' }}
+            style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent-4))' }}
           />
         </div>
 
@@ -53,13 +53,13 @@ export default function Projects() {
           <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono"
             style={{
-              background: 'color-mix(in srgb, #00ff87 8%, transparent)',
-              border: '1px solid color-mix(in srgb, #00ff87 30%, transparent)',
-              color: '#00ff87',
+              background: 'color-mix(in srgb, var(--accent) 8%, transparent)',
+              border: '1px solid color-mix(in srgb, var(--accent) 30%, transparent)',
+              color: 'var(--accent)',
             }}
           >
             <span className="w-2 h-2 rounded-full bg-current animate-pulse" />
-            3 projects live in production · deployed on Vercel
+            4 projects live in production · deployed on Vercel
           </div>
         </div>
 
@@ -97,9 +97,9 @@ export default function Projects() {
                     <span
                       className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono font-bold"
                       style={{
-                        background: 'color-mix(in srgb, #00ff87 12%, transparent)',
-                        border: '1px solid color-mix(in srgb, #00ff87 40%, transparent)',
-                        color: '#00ff87',
+                        background: 'color-mix(in srgb, var(--accent) 12%, transparent)',
+                        border: '1px solid color-mix(in srgb, var(--accent) 40%, transparent)',
+                        color: 'var(--accent)',
                       }}
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />

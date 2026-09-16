@@ -4,11 +4,11 @@ import { resumeData } from '@/lib/data';
 import { Github, Linkedin, Code2, Mail, MapPin, ArrowDown, Instagram, Youtube, Twitter, Link2 } from 'lucide-react';
 
 const roles = [
-  'Full Stack Engineer',
-  'Node.js Architect',
-  'TypeScript Developer',
-  'Microservices Builder',
-  'React Craftsman',
+  'Software Engineer',
+  'Full Stack Developer',
+  'SDE 1',
+  'Backend Developer',
+  'Frontend Developer',
 ];
 
 export default function Hero() {
@@ -61,7 +61,7 @@ export default function Hero() {
     }[] = [];
 
     const isDark = document.documentElement.classList.contains('dark');
-    const colors = isDark ? ['#00ff87', '#00e5ff', '#a3e635'] : ['#00c96e', '#0070f3', '#16a34a'];
+    const colors = isDark ? ['#ef4444', '#eab308', '#0ea5e9', '#f97316'] : ['#000000', '#262626', '#404040', '#525252'];
 
     for (let i = 0; i < 60; i++) {
       particles.push({
@@ -100,7 +100,7 @@ export default function Hero() {
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = isDark ? '#00ff8720' : '#00c96e20';
+            ctx.strokeStyle = isDark ? '#eab30822' : '#00000022';
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -203,11 +203,11 @@ export default function Hero() {
               className="text-base md:text-lg leading-relaxed max-w-lg animate-slide-up stagger-3"
               style={{ color: 'var(--text-muted)' }}
             >
-              Building scalable web applications with{' '}
+              Software Engineer & Full Stack Developer building production web apps with{' '}
               <strong style={{ color: 'var(--text)' }}>Node.js</strong>,{' '}
               <strong style={{ color: 'var(--text)' }}>TypeScript</strong>, and{' '}
-              <strong style={{ color: 'var(--text)' }}>React</strong>. Passionate about
-              distributed systems and clean architecture.
+              <strong style={{ color: 'var(--text)' }}>React</strong>. Actively seeking SDE 1 &
+              fullstack roles.
             </p>
 
             {/* Location */}
@@ -224,7 +224,7 @@ export default function Hero() {
               <a
                 href="mailto:shashankraj72777@gmail.com"
                 className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 hover:shadow-lg"
-                style={{ background: 'var(--accent)', color: '#000' }}
+                style={{ background: 'var(--accent)', color: 'var(--accent-text)' }}
               >
                 <Mail size={16} />
                 Get In Touch

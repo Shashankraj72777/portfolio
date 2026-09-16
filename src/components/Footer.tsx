@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="flex items-center gap-2">
           <div
             className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-mono font-bold"
-            style={{ background: 'var(--accent)', color: '#000' }}
+            style={{ background: 'var(--accent)', color: 'var(--accent-text)' }}
           >
             SR
           </div>

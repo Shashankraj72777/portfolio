@@ -49,7 +49,7 @@ export default function Navbar() {
         <div className="font-display font-bold text-xl tracking-tight flex items-center gap-2">
           <span
             className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-mono font-bold"
-            style={{ background: 'var(--accent)', color: '#000' }}
+            style={{ background: 'var(--accent)', color: 'var(--accent-text)' }}
           >
             SR
           </span>
@@ -94,7 +94,7 @@ export default function Navbar() {
             className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105"
             style={{
               background: 'var(--accent)',
-              color: '#000',
+              color: 'var(--accent-text)',
               fontFamily: 'var(--font-mono)',
             }}
           >

@@ -3,12 +3,12 @@ import { useEffect, useRef } from 'react';
 import { resumeData } from '@/lib/data';
 
 const categoryColors: Record<string, string> = {
-  Languages: '#00ff87',
-  Frontend: '#00e5ff',
-  Backend: '#a3e635',
-  Databases: '#f59e0b',
-  'DevOps & Tools': '#c084fc',
-  'Cloud & Infra': '#fb7185',
+  Languages: '#ef4444',
+  Frontend: '#eab308',
+  Backend: '#0ea5e9',
+  Databases: '#f97316',
+  'DevOps & Tools': '#22c55e',
+  'Cloud & Infra': '#000000',
 };
 
 export default function Skills() {
@@ -52,7 +52,7 @@ export default function Skills() {
           </h2>
           <div
             className="w-16 h-1 mt-4 rounded-full"
-            style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent-2))' }}
+            style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent-4))' }}
           />
         </div>
 
@@ -123,9 +123,12 @@ export default function Skills() {
                 { name: 'React', emoji: '⚛️' },
                 { name: 'Next.js', emoji: '▲' },
                 { name: 'PostgreSQL', emoji: '🐘' },
+                { name: 'Tailwind CSS', emoji: '🌊' },
+                { name: 'Supabase', emoji: '⚡' },
                 { name: 'Docker', emoji: '🐳' },
                 { name: 'Redis', emoji: '🔴' },
                 { name: 'RabbitMQ', emoji: '🐰' },
+                { name: 'Vercel', emoji: '△' },
               ].map((tech) => (
                 <div
                   key={tech.name}

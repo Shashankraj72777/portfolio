@@ -15,9 +15,11 @@ module.exports = {
       },
       colors: {
         accent: {
-          green: '#00ff87',
-          cyan: '#00e5ff',
-          lime: '#a3e635',
+          red: '#ef4444',
+          yellow: '#eab308',
+          sky: '#0ea5e9',
+          dark: '#171717',
+          light: '#f5f5f5',
         },
       },
       animation: {
@@ -36,8 +38,8 @@ module.exports = {
           '50%': { transform: 'translateY(-20px)' },
         },
         glow: {
-          from: { textShadow: '0 0 10px #00ff87, 0 0 20px #00ff87' },
-          to: { textShadow: '0 0 20px #00ff87, 0 0 40px #00ff87, 0 0 60px #00ff87' },
+          from: { textShadow: '0 0 10px #ef4444, 0 0 20px #eab308' },
+          to: { textShadow: '0 0 20px #ef4444, 0 0 40px #eab308, 0 0 60px #0ea5e9' },
         },
         slideUp: {
           from: { transform: 'translateY(60px)', opacity: '0' },

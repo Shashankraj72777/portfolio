@@ -99,7 +99,7 @@ export default function Contact() {
           </h2>
           <div
             className="w-16 h-1 mt-4 rounded-full"
-            style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent-2))' }}
+            style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent-4))' }}
           />
         </div>
 
@@ -108,8 +108,9 @@ export default function Contact() {
           <div className="space-y-8">
             <div className="reveal">
               <p className="text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-                I&apos;m actively looking for new opportunities. Whether you have a project idea, a
-                job role, or just want to chat about tech — my inbox is always open.
+                I&apos;m actively seeking SDE 1, Software Engineer, and Full Stack Developer
+                opportunities. Whether you have an opening, a project idea, or just want to chat
+                about tech — my inbox is always open.
               </p>
             </div>
 
@@ -285,11 +286,11 @@ export default function Contact() {
                 type="submit"
                 disabled={status === 'sending' || status === 'sent'}
                 className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed"
-                style={{ background: 'var(--accent)', color: '#000' }}
+                style={{ background: 'var(--accent)', color: 'var(--accent-text)' }}
               >
                 {status === 'sending' ? (
                   <>
-                    <div className="w-4 h-4 border-2 border-black/30 border-t-black rounded-full animate-spin" />
+                    <div className="w-4 h-4 border-2 border-current/30 border-t-current rounded-full animate-spin" />
                     Sending...
                   </>
                 ) : status === 'sent' ? (
